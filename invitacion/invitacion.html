@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Invitación de Cumpleaños</title>
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ff758c,#ff7eb3,#fad0c4);
+    background-size:400% 400%;
+    animation: fondo 12s ease infinite;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+@keyframes fondo{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+.card{
+    background:rgba(255,255,255,0.95);
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    width:360px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.25);
+    animation: aparecer 1.5s ease;
+    backdrop-filter: blur(5px);
+}
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(60px) scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+h1{
+    color:#ff2e63;
+    margin-bottom:10px;
+    font-size:28px;
+    letter-spacing:1px;
+}
+h2{
+    color:#333;
+    font-size:24px;
+    margin-bottom:10px;
+}
+p{
+    font-size:18px;
+    color:#444;
+    line-height:1.4;
+}
+img{
+    width:160px;
+    height:160px;
+    object-fit:cover;
+    border-radius:50%;
+    margin:18px 0;
+    border:6px solid #ff4d6d;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    animation: flotar 4s infinite ease-in-out;
+}
+
+@keyframes flotar{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0);}
+}
+.balloon{
+    position:absolute;
+    bottom:-150px;
+    width:60px;
+    height:80px;
+    border-radius:50%;
+    animation: subir linear infinite;
+    opacity:.85;
+}
+.balloon:after{
+    content:"";
+    position:absolute;
+    width:2px;
+    height:40px;
+    background:#555;
+    left:50%;
+    bottom:-40px;
+}
+@keyframes subir{
+    from{
+        transform:translateY(0) rotate(0deg);
+    }
+    to{
+        transform:translateY(-130vh) rotate(10deg);
+    }
+}
+.balloon:nth-child(1){
+    left:8%;
+    background:#ff6b6b;
+    animation-duration:9s;
+}
+
+.balloon:nth-child(2){
+    left:28%;
+    background:#ffd93d;
+    animation-duration:11s;
+}
+.balloon:nth-child(3){
+    left:48%;
+    background:#6bcB77;
+    animation-duration:10s;
+}
+.balloon:nth-child(4){
+    left:68%;
+    background:#4d96ff;
+    animation-duration:12s;
+}
+.balloon:nth-child(5){
+    left:88%;
+    background:#c77dff;
+    animation-duration:8s;
+}
+.card:hover{
+    transform:scale(1.03);
+    transition:0.4s;
+}
+</style>
+</head>
+<body>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="card">
+<h1>🎉 Invitación 🎉</h1>
+<h2>Lupita</h2>
+<img src="foto1.jpg">
+<p>Te invitamos a celebrar este día especial</p>
+<p><b>📅 Fecha:</b><br>
+7 de marzo del 2026</p>
+<p><b>⏰ Hora:</b><br>
+3:00 PM</p>
+<p><b>📍 Lugar:</b><br>
+Barrio de San Pedro</p>
+<p>¡Esperamos verte! 🎂</p>
+</div>
+</body>
+</html>
